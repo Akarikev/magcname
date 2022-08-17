@@ -58,6 +58,9 @@ text {
     color: var(--darkest);
     transform: translateY(-10px);
     transition: transform 1s, opacity .4s;
+    background: -webkit-linear-gradient(45deg, blue, cyan);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 input {
@@ -77,6 +80,7 @@ button {
     -webkit-text-fill-color: transparent;
     font-size: 1.7rem;
     font-weight: bold;
+    font-family: 'poppins';
     cursor: pointer;
     transition: 0.4s;
     border-radius: 11px;
