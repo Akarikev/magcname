@@ -38,6 +38,19 @@ input {
     padding: 10px 20px;
 }
 
+.logo {
+    position: absolute;
+    text-align: center;
+    margin-top: -200px;
+    margin-left: 120px;
+}
+
+.logo h1 {
+    background: -webkit-linear-gradient(45deg, blue, red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
 input,
 button {
     appearance: none;
@@ -58,7 +71,7 @@ text {
     color: var(--darkest);
     transform: translateY(-10px);
     transition: transform 1s, opacity .4s;
-    background: -webkit-linear-gradient(45deg, blue, cyan);
+    background: -webkit-linear-gradient(70deg, blue, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
@@ -103,5 +116,8 @@ button:active {
     }
     .container {
         margin: 0;
+    }
+    .logo {
+        margin-left: 150px;
     }
 }
