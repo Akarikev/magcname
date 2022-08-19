@@ -46,13 +46,40 @@ input {
 }
 
 .logo h1 {
-    background: -webkit-linear-gradient(45deg, blue, red);
+    /* background: -webkit-linear-gradient(45deg, blue, red);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
+    */
+    animation: flicker 1.5s infinite alternate;
+    color: #fff;
 }
 
-input,
-button {
+p {
+    color: var(--light);
+    font-size: 1rem;
+}
+
+
+/* Flickering animation */
+
+@keyframes flicker {
+    0%,
+    18%,
+    22%,
+    25%,
+    53%,
+    57%,
+    100% {
+        text-shadow: 0 0 4px #fff, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+    }
+    20%,
+    24%,
+    55% {
+        text-shadow: none;
+    }
+}
+
+input {
     appearance: none;
     border: none;
     outline: none;
@@ -63,6 +90,7 @@ input::placeholder {
     font-size: 2rem;
     text-align: center;
     color: var(--light);
+    font-weight: bold;
 }
 
 text {
@@ -84,21 +112,41 @@ input {
     transition: transform 1s, opacity .4s;
 }
 
+.pulsate {}
+
+
+/*@keyframes pulsate {
+    100% {
+        text-shadow: 0 0 4px #111827, 0 0 11px #fff, 0 0 19px #fff, 0 0 40px #0fa, 0 0 80px #0fa, 0 0 90px #0fa, 0 0 100px #0fa, 0 0 150px #0fa;
+    }
+    0% {
+        text-shadow: 0 0 2px #111827, 0 0 4px #fff, 0 0 6px #fff, 0 0 10px #0fa, 0 0 45px #0fa, 0 0 55px #0fa, 0 0 70px #0fa, 0 0 80px #0fa;
+    }
+}
+
+*/
+
+#text,
+text {
+    font-weight: bold;
+    text-shadow: 2px 3px 1px var(--darker);
+    color: #fff;
+}
+
 button {
     margin-top: 20px;
     display: flex;
     justify-content: center;
-    background: var(--darkest);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 1.7rem;
-    font-weight: bold;
+    background: var(--light);
+    font-size: 1.5rem;
     font-family: 'poppins';
     cursor: pointer;
     transition: 0.4s;
-    border-radius: 11px;
     padding: 11px 10px;
     transition: transform 1s, opacity .4s;
+    color: var(--darkest);
+    border: none;
+    border-radius: 7px;
 }
 
 button:hover {
@@ -125,6 +173,8 @@ button:active {
     text {
         display: flex;
         justify-content: center;
+        font-weight: bold;
+        text-shadow: 2px 3px 1px var(--darker);
     }
     input {
         width: 100%;

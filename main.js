@@ -14,11 +14,20 @@ button.addEventListener("click", () => {
     if (writeEffect.value == "") {
         alert("Please write something");
     }
-    //if text is empty, do not display an empty text, go back to the original text
+    //if text is empty, do not display an empty text, go back to the original text with the title
+
     if (writeEffect.value == "") {
-        document.getElementById("text").innerHTML = "";
+        document.getElementById("text").innerHTML = "Write something!😀";
+        //center the text
+        document.getElementById("text").style.textAlign = "center";
+
         document.getElementById("title").innerText = "";
         writeEffect.style.display = "block";
         button.style.display = "block";
+    }
+
+    //do not remove the title when the text is empty
+    if (writeEffect.value == "") {
+        removeTitle.style.display = "none";
     }
 });
