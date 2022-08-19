@@ -109,15 +109,36 @@ button:active {
     opacity: .2;
 }
 
-@media all and (max-width: 768px) {
-    body {
-        overflow-x: hidden;
-        width: 100vw;
-    }
+
+/*display responsive index.html on all devices with screen less than 768px*/
+
+@media screen and (max-width: 768px) {
     .container {
-        margin: 0;
+        width: 74%;
     }
     .logo {
-        margin-left: 150px;
+        margin-top: -100px;
+        margin-left: 0;
+        margin-bottom: 69px;
+    }
+    #text,
+    text {
+        display: flex;
+        justify-content: center;
+    }
+    input {
+        width: 100%;
+    }
+    text {
+        font-size: 3rem;
+    }
+    input {
+        font-size: 1.5rem;
+    }
+    input::placeholder {
+        font-size: 1rem;
+    }
+    button {
+        font-size: 1.3rem;
     }
 }
